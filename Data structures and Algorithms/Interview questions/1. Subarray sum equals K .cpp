@@ -4,7 +4,7 @@
     Naive Approach : 
         For all index check how many subarrays are possible with given sum:
 
-        O(N^2) Time And 
+        O(N^2) Time And  O(1) Space
         int subarraySum(vector<int>& arr, int k) {
             int n = arr.size();
             int ans = 0;
@@ -28,6 +28,7 @@
         If current sum till now is 15 , k is 8 and we had a preSum of 7 it means that there is a subarray
         with given sum. So we will add all previous calculated counts and store in a result.*/
 
+        // O(N) Time and O(N) Space
         int subarraySum(vector<int>& nums, int k) {
             unordered_map<int,int>mp;
             int sum = 0;
@@ -44,10 +45,3 @@
             }
             return count;
         }
-
-
-
-
-
-
-
